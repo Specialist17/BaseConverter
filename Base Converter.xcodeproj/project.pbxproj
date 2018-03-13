@@ -14,6 +14,7 @@
 		908293FF20531C0E00F88CB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908293FD20531C0E00F88CB2 /* LaunchScreen.storyboard */; };
 		908294092053257E00F88CB2 /* BinaryDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908294082053257E00F88CB2 /* BinaryDecimal.swift */; };
 		908A36842059EC12008C3B29 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908A36832059EC12008C3B29 /* Constants.swift */; };
+		908A36872059EE06008C3B29 /* BaseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908A36862059EE06008C3B29 /* BaseConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9082940020531C0E00F88CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		908294082053257E00F88CB2 /* BinaryDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDecimal.swift; sourceTree = "<group>"; };
 		908A36832059EC12008C3B29 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		908A36862059EE06008C3B29 /* BaseConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				908294082053257E00F88CB2 /* BinaryDecimal.swift */,
+				908A36862059EE06008C3B29 /* BaseConverter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				908293F720531C0D00F88CB2 /* ViewController.swift in Sources */,
 				908293F520531C0D00F88CB2 /* AppDelegate.swift in Sources */,
 				908A36842059EC12008C3B29 /* Constants.swift in Sources */,
+				908A36872059EE06008C3B29 /* BaseConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

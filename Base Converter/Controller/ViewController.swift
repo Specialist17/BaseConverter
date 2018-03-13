@@ -14,10 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var binaryBtn: UIButton!
     @IBOutlet weak var decimalBtn: UIButton!
     
+    let converter = BaseConverter()
+    
     let placeholder = NSAttributedString(string: "Enter a value...", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.5147656488, green: 0.5147656488, blue: 0.5147656488, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Menlo", size: 36.0)!])
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         valueEntryTextfield.attributedPlaceholder = placeholder
         
         valueEntryTextfield.addTarget(self, action: #selector(textFieldTextDidChange), for: .editingChanged)
