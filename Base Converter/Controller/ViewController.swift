@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        print(converter.encode(forNumber: 4, toBase: 2))
         valueEntryTextfield.attributedPlaceholder = placeholder
         
         valueEntryTextfield.addTarget(self, action: #selector(textFieldTextDidChange), for: .editingChanged)
