@@ -23,9 +23,11 @@ class ViewController: UIViewController {
         print(converter.encode(forNumber: 4, toBase: 2))
         valueEntryTextfield.attributedPlaceholder = placeholder
         
+        converter.asciiEncode()
+        
         valueEntryTextfield.addTarget(self, action: #selector(textFieldTextDidChange), for: .editingChanged)
         
-        disableButtons()
+//        disableButtons()
         
         let binDigit = BinaryDecimal(145)
         print(binDigit.calculateBinaryValueForInt())
