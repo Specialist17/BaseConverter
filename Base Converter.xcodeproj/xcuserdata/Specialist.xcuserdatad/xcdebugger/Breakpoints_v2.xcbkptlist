@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Base Converter/Controller/ViewController.swift"
-            timestampString = "542994814.170114"
+            timestampString = "543289941.596258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Base Converter/Controller/ViewController.swift"
-            timestampString = "542994814.170189"
+            timestampString = "543289941.596621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Base Converter/Controller/ViewController.swift"
-            timestampString = "542994814.17024"
+            timestampString = "543289941.596875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
@@ -90,77 +90,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Base Converter/Controller/ViewController.swift"
-            timestampString = "542994814.170283"
+            timestampString = "543289941.597231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
             endingLineNumber = "79"
             landmarkName = "decimalBtnWasPressed(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Base Converter/Model/BaseConverter.swift"
-            timestampString = "543090781.4159091"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "asciiEncode()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Base Converter/Model/BaseConverter.swift"
-            timestampString = "543090781.416235"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "asciiEncode()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Base_Converter.BaseConverter.asciiEncode() -&gt; ()"
-                  moduleName = "Base Converter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Specialist/Documents/Code/Devslopes/iOS_11/Base%20Converter/Base%20Converter/Model/BaseConverter.swift"
-                  timestampString = "543090695.634324"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String, Swift.UInt8) -&gt; Swift.String in Base_Converter.BaseConverter.asciiEncode() -&gt; ()"
-                  moduleName = "Base Converter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Specialist/Documents/Code/Devslopes/iOS_11/Base%20Converter/Base%20Converter/Model/BaseConverter.swift"
-                  timestampString = "543090695.636786"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -54,45 +54,26 @@ struct BaseConverter {
     }
     
     func asciiEncode() {
-        let string = "T"
-        let binaryData: Data? = string.data(using: .utf8, allowLossyConversion: false)
-        
-        let stringOf01 = binaryData?.reduce("") { (acc, byte) -> String in
-            acc + String(byte, radix: 2)
-        }
-        
-        print(stringOf01!)
-        
-        let binaryBits = stringOf01!
-        
-//        var result = ""
-//        var index = binaryBits.startIndex
-//
-//        while let next = binaryBits.index(index, offsetBy: 7, limitedBy: binaryBits.endIndex) {
-//            let asciiCode = UInt8(binaryBits[index..<next], radix: 2)!
-//            result.append(Character(UnicodeScalar(asciiCode)))
-//            index = next
-//        }
-        
+
         // Sample use :
-        let r = stringToBinaryString(myString: "HELP")
+        let r = stringToBinaryString(myString: "Hóla, como estás?")
         print(r)
 
-//        var index = binaryBits.startIndex
-//        var result: String = ""
-//        for _ in 0..<binaryBits.characters.count/8 {
-//            let nextIndex = binaryBits.index(index, offsetBy: 8)
-//            let charBits = binaryBits[index..<nextIndex]
-//            result += String(UnicodeScalar(UInt8(charBits, radix: 2)!))
-//            index = nextIndex
-//        }
-//        print(result)
+        var index = r.startIndex
+        var result: String = ""
+        for _ in 0..<r.count/8 {
+            let nextIndex = r.index(index, offsetBy: 8)
+            let charBits = r[index..<nextIndex]
+            result += String(UnicodeScalar(UInt8(charBits, radix: 2)!))
+            index = nextIndex
+        }
+        print(result)
     }
     
     func stringToBinaryString (myString:String) -> String {
         
         // Array of characters
-        let characterArray = [Character](myString.characters)
+        let characterArray = [Character](myString)
         
         // Array of asccii value
         let asciiArray = characterArray.map({String($0).unicodeScalars.first!.value})
@@ -101,7 +82,16 @@ struct BaseConverter {
         let binaryArray = asciiArray.map ({ String($0, radix: 2)})
         
         // Reduce in a String
-        let r = binaryArray.reduce("",{"0" + $0 + " " + $1})
+        let r = binaryArray.reduce("",{
+            if $1.count == 6 {
+                return $0 + "00" + $1
+            } else if $1.count == 7{
+                return $0 + "0" + $1
+            } else {
+                return $0 + $1
+            }
+            
+        })
         
         return r
     }
