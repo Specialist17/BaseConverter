@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         valueEntryTextfield.attributedPlaceholder = placeholder
         
-        converter.asciiEncode()
+        
         
         valueEntryTextfield.addTarget(self, action: #selector(textFieldTextDidChange), for: .editingChanged)
     }
@@ -46,7 +46,9 @@ class ViewController: UIViewController {
 //                guard let intFromString = Int(numbers) else {return}
 //
 //                let binaryDigit = BinaryDecimal(intFromString)
-                let result = converter.decode(forDigits: String(numbers), withBase: 16)
+                guard let base_1 = CONVERSION_TYPES[Array(CONVERSION_TYPES.keys)[basePicker.selectedRow(inComponent: 0)]],
+                    let base_2 = CONVERSION_TYPES[Array(CONVERSION_TYPES.keys)[basePicker.selectedRow(inComponent: 1)]] else { return }
+                let result = converter.convert(digits: String(numbers), base1: base_1, base2: base_2)
                 all_nums.append("\(result)")
             }
             
@@ -68,7 +70,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return CONVERSION_TYPES[row]
+        return Array(CONVERSION_TYPES.keys)[row]
     }
 }
 

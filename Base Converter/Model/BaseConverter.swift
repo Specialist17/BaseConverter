@@ -41,8 +41,6 @@ struct BaseConverter {
         var digitList = [String]()
         var currentQuotient = number
         
-        var num = Int(String(ENCODING_CHARACTERS[currentQuotient % base]!))!
-        
         digitList.append(String(ENCODING_CHARACTERS[currentQuotient % base]!))
         
         while floor(Double(currentQuotient) / Double(base)) > 0 {
@@ -61,6 +59,17 @@ struct BaseConverter {
      */
     func convert(digits: String, base1: Int, base2: Int) -> String{
         //Handle up to base 36 [0-9a-z]
+        
+        if base1 == 0 {
+            let string = asciiEncode(text: digits)
+            return string
+        }
+        
+        if base2 == 0 {
+            let string = stringToBinaryString(myString: digits)
+            return string
+        }
+        
         assert (2 <= base1 && base1 <= 36)
         assert (2 <= base2 && base2 <= 36)
         //TODO: Convert digits from base 2 to base 16 (and vice versa)
@@ -73,21 +82,17 @@ struct BaseConverter {
         }
     }
     
-    func asciiEncode() {
+    func asciiEncode(text: String) -> String{
 
-        // Sample use :
-        let r = stringToBinaryString(myString: "Hóla, como estás?")
-        print(r)
-
-        var index = r.startIndex
+        var index = text.startIndex
         var result: String = ""
-        for _ in 0..<r.count/8 {
-            let nextIndex = r.index(index, offsetBy: 8)
-            let charBits = r[index..<nextIndex]
+        for _ in 0..<text.count/8 {
+            let nextIndex = text.index(index, offsetBy: 8)
+            let charBits = text[index..<nextIndex]
             result += String(UnicodeScalar(UInt8(charBits, radix: 2)!))
             index = nextIndex
         }
-        print(result)
+        return result
     }
     
     func stringToBinaryString (myString:String) -> String {
@@ -104,11 +109,11 @@ struct BaseConverter {
         // Reduce in a String
         let r = binaryArray.reduce("",{
             if $1.count == 6 {
-                return $0 + "00" + $1
+                return $0 + "00" + $1 + " "
             } else if $1.count == 7{
-                return $0 + "0" + $1
+                return $0 + "0" + $1 + " "
             } else {
-                return $0 + $1
+                return $0 + $1 + " "
             }
             
         })
