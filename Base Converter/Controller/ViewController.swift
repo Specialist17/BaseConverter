@@ -43,10 +43,11 @@ class ViewController: UIViewController {
             let strings = string.split(separator: " ")
             var all_nums = [String]()
             for numbers in strings {
-                guard let intFromString = Int(numbers) else {return}
-                
-                let binaryDigit = BinaryDecimal(intFromString)
-                all_nums.append(binaryDigit.calculateBinaryValueForInt())
+//                guard let intFromString = Int(numbers) else {return}
+//
+//                let binaryDigit = BinaryDecimal(intFromString)
+                let result = converter.decode(forDigits: String(numbers), withBase: 16)
+                all_nums.append("\(result)")
             }
             
             let new_str = all_nums.joined(separator: " ")

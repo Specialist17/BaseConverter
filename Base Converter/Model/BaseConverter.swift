@@ -53,6 +53,26 @@ struct BaseConverter {
         return String(digitList.joined(separator: "").reversed())
     }
     
+    /* Convert given digits in base1 to digits in base2.
+        digits: str -- string representation of number (in base1)
+        base1: int -- base of given number
+        base2: int -- base to convert to
+        return: str -- string representation of number (in base2)
+     */
+    func convert(digits: String, base1: Int, base2: Int) -> String{
+        //Handle up to base 36 [0-9a-z]
+        assert (2 <= base1 && base1 <= 36)
+        assert (2 <= base2 && base2 <= 36)
+        //TODO: Convert digits from base 2 to base 16 (and vice versa)
+        
+        if base1 == 10{
+            return encode(forNumber: Int(digits)!, toBase: base2)
+        } else{
+            let base_10_repr = decode(forDigits: digits, withBase: base1)
+            return encode(forNumber: base_10_repr, toBase: base2)
+        }
+    }
+    
     func asciiEncode() {
 
         // Sample use :
