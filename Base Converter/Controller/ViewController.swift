@@ -23,8 +23,6 @@ class ViewController: UIViewController {
         
         valueEntryTextfield.attributedPlaceholder = placeholder
         
-        
-        
         valueEntryTextfield.addTarget(self, action: #selector(textFieldTextDidChange), for: .editingChanged)
     }
     
@@ -54,6 +52,8 @@ class ViewController: UIViewController {
             
             let new_str = all_nums.joined(separator: " ")
             valueEntryTextfield.text = "\(new_str)"
+        } else {
+            
         }
     }
     
@@ -71,6 +71,20 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return Array(CONVERSION_TYPES.keys)[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont(name: "Helvetica Neue", size: 14)
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = Array(CONVERSION_TYPES.keys)[row]
+        pickerLabel?.textColor = UIColor.white
+        
+        
+        return pickerLabel!
     }
 }
 
